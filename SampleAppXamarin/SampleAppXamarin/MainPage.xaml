@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:SampleAppXamarin"
              x:Class="SampleAppXamarin.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
+	<Label Text="First App Published to Github!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
