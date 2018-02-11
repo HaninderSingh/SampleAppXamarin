@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleAppXamarin.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,12 @@ namespace SampleAppXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new SampleAppXamarin.MainPage();
-		}
+            MainPage = new MasterDetailPage()
+            {
+                Master = new MasterPage() { Title = "User Detail" },
+                Detail = new NavigationPage(new UserDetailViewPage())
+            };
+        }
 
 		protected override void OnStart ()
 		{

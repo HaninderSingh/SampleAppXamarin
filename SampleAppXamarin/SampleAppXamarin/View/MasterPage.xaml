@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SampleAppXamarin.CustomControl"
+             x:Class="SampleAppXamarin.View.MasterPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0" Spacing="15">
+                <local:NavigationControl Text="Register Page" Command="{Binding NavigationCommand}" CommandParameter="1" />
+                <ContentView HeightRequest="1" BackgroundColor="Gray" />
+                <local:NavigationControl Text="User Detail"  Command="{Binding NavigationCommand}" CommandParameter="2" />
+            </StackLayout>
+     </ContentPage.Content>
+</ContentPage>
