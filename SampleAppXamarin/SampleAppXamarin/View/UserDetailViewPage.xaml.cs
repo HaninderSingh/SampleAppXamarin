@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleAppXamarin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,28 @@ namespace SampleAppXamarin.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class UserDetailViewPage : ContentPage
 	{
-		public UserDetailViewPage ()
+        UserDetailViewModel userDetailViewModel;
+        public UserDetailViewPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            userDetailViewModel = new UserDetailViewModel();
+            BindingContext = userDetailViewModel;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            try
+            {
+               if(userDetailViewModel != null)
+                {
+                    userDetailViewModel.OnUserlist();
+                    Userlist.ItemsSource = userDetailViewModel.UserDetaillist;
+               }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+    }
 }

@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace SampleAppXamarin.ViewModel
 {
-    public class MasterPageViewModel
+    public class MasterPageViewModel : BaseViewModel
     {
         public Command NavigationCommand { get; set; }
         public MasterPageViewModel()
