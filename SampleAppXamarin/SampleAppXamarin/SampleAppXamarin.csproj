@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
   </ItemGroup>
 
@@ -25,10 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="CustomControl\NavigationControl.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -36,6 +33,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\RegisterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Template\UserDetailTemplate.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\UserDetailViewPage.xaml">

@@ -1,46 +1,24 @@
 ﻿[
   {
-    "FirstName": "",
-    "LastName": "",
+    "FirstName": "Alam",
+    "LastName": "Md",
     "profilePicture": "",
-    "ContactNo": "",
-    "E-mail": "",
-    "Nationality": "",
-    "DOB": "",
-    "maritalstatus": "",
-    "sex": ""
-},
-  {
-    "FirstName": "",
-    "LastName": "",
-    "profilePicture": "",
-    "ContactNo": "",
-    "E-mail": "",
-    "Nationality": "",
-    "DOB": "",
-    "maritalstatus": "",
-    "sex": ""
+    "ContactNo": "9800123456",
+    "Email": "alam@demo.com",
+    "Nationality": "Indian",
+    "DOB": "10/2/93",
+    "Maritalstatus": "Unmarried",
+    "Sex": "Male"
   },
   {
-    "FirstName": "",
-    "LastName": "",
+    "FirstName": "Karan",
+    "LastName": "Sharma",
     "profilePicture": "",
-    "ContactNo": "",
-    "E-mail": "",
-    "Nationality": "",
-    "DOB": "",
-    "maritalstatus": "",
-    "sex": ""
-  },
-  {
-    "FirstName": "",
-    "LastName": "",
-    "profilePicture": "",
-    "ContactNo": "",
-    "E-mail": "",
-    "Nationality": "",
-    "DOB": "",
-    "maritalstatus": "",
-    "sex": ""
+    "ContactNo": "9800112233",
+    "Email": "Karan@demo.com",
+    "Nationality": "Indian",
+    "DOB": "28/1/92",
+    "Maritalstatus": "Unmarried",
+    "Sex": "Single"
   }
 ]

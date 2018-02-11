@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
+              xmlns:Template="clr-namespace:SampleAppXamarin.View"
              x:Class="SampleAppXamarin.View.UserDetailViewPage">
+    <!--<ContentPage.Content>
+         <Template:UserDetailTemplate></Template:UserDetailTemplate>
+    </ContentPage.Content>-->
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView x:Name="Userlist"  HasUnevenRows="True" ItemsSource="{Binding UserDetaillist}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        
+                            <Template:UserDetailTemplate/>
+                      
+                    </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
     </ContentPage.Content>
 </ContentPage>
