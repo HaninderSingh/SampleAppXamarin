@@ -28,7 +28,7 @@ namespace SampleAppXamarin.View
                if(userDetailViewModel != null)
                 {
                     userDetailViewModel.OnUserlist();
-                    Userlist.ItemsSource = userDetailViewModel.UserDetaillist;
+                    //Userlist.ItemsSource = userDetailViewModel.UserDetaillist;
                }
             }
             catch (Exception ex)

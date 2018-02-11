@@ -8,14 +8,14 @@
          <Template:UserDetailTemplate></Template:UserDetailTemplate>
     </ContentPage.Content>-->
     <ContentPage.Content>
-        <ListView x:Name="Userlist"  HasUnevenRows="True" ItemsSource="{Binding UserDetaillist}">
+        <ListView  HasUnevenRows="True" ItemsSource="{Binding UserDetaillist}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                        
+                        <StackLayout Spacing="10" >
                             <Template:UserDetailTemplate/>
-                      
-                    </ViewCell>
+                        </StackLayout>
+                     </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

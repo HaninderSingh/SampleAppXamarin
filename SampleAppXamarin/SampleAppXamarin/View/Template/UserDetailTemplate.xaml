@@ -4,11 +4,11 @@
              xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
              x:Class="SampleAppXamarin.View.UserDetailTemplate">
     <ContentView.Content>
-        <controls:CardView Padding="10">
+        <controls:CardView Margin="10" Padding="10">
             <Grid>
-                <StackLayout Padding="10">
+                <StackLayout>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -17,7 +17,7 @@
                         <Label Grid.Column="1" Text="{Binding FirstName}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -26,16 +26,16 @@
                         <Label Grid.Column="1" Text="{Binding LastName}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="Contact Number" VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="0" Text="Contact" VerticalTextAlignment="Center"/>
                         <Label Grid.Column="1" Text="{Binding ContactNo}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -44,7 +44,7 @@
                         <Label Grid.Column="1" Text="{Binding Email}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -53,7 +53,7 @@
                         <Label Grid.Column="1" Text="{Binding Nationality}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -62,7 +62,7 @@
                         <Label Grid.Column="1" Text="{Binding DOB}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
@@ -71,7 +71,7 @@
                         <Label Grid.Column="1" Text="{Binding Maritalstatus}" VerticalTextAlignment="Center"/>
                     </Grid>
 
-                    <Grid HeightRequest="50">
+                    <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
