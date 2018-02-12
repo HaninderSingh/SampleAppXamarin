@@ -1,12 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
              x:Class="SampleAppXamarin.View.RegisterPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Padding="10">
+        <controls:CardView Padding="10">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource DefaultLabel}" Text="FirstName"  TextColor="{DynamicResource LableTextColor}"/>
+                        <Entry Grid.Column="1" x:Name="entryFirstName"
+                             Placeholder="FirstName" Text="{Binding FirstName , Mode=TwoWay}">
+                        </Entry>
+                    </Grid>
+
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="LastName"/>
+                        <Entry Grid.Column="1" Margin="0,8,0,0"
+                           x:Name="entryLastName"  Placeholder="LastName" Text="{Binding LastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
+                        </Entry>
+                    </Grid>
+
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Contact"/>
+                        <Entry Margin="0,8,0,0" Grid.Column="1"
+                                           x:Name="ContactNoEntry" Text="{Binding ContactNo , Mode=TwoWay}"
+                                           Placeholder="Email" Keyboard="Numeric">
+                        </Entry>
+                    </Grid>
+                    
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Email"/>
+                        <Entry Margin="0,8,0,0" Grid.Column="1"
+                                           x:Name="emailEntry" Text="{Binding EmailAddress , Mode=TwoWay}"
+                                           Placeholder="Email" Keyboard="Email">
+                        </Entry>
+                    </Grid>
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Nationality"/>
+                    </Grid>
+
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="D.O.B"/>
+                    </Grid>
+                    
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Maritial Status"/>
+                    </Grid>
+
+                    <Grid HeightRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Sex"/>
+                    </Grid>
+                </StackLayout>
+
+            </ScrollView>
+        </controls:CardView>
+
+        <!--<StackLayout
+          x:Name="loginStack"
+          HorizontalOptions="Fill"
+          VerticalOptions="EndAndExpand"
+          Padding="20, 0"
+          Grid.Row="5">
+            <ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{DynamicResource ActivityIndicatorColor}"></ActivityIndicator>
+            <artina:Button
+             AutomationId="Register"
+            Style="{DynamicResource PrimaryActionButtonStyle}" 
+            VerticalOptions="End"
+            Text="{L10n:Translate Register}" IsEnabled="{Binding IsEnabled}" Command="{Binding RegisterCommand}"
+            WidthRequest="{ artina:OnOrientationDouble
+						LandscapePhone=200,
+						LandscapeTablet=400 }"
+            HorizontalOptions="{ artina:OnOrientationLayoutOptions
+						PortraitPhone=Fill,
+						LandscapePhone=Center,
+						PortraitTablet=Fill,
+						LandscapeTablet=Center }"/>
+
+
+
+        </StackLayout>-->
+
+    </StackLayout>
 </ContentPage>

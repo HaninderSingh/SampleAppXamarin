@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resource\Country.json" />
     <None Remove="Resource\Detail.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resource\Country.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resource\Detail.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

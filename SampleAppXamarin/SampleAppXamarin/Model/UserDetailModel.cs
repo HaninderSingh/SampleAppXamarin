@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SampleAppXamarin.Model
 {
-    public class UserDetailModel : INotifyPropertyChanged
+    public class UserDetailModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -16,7 +16,5 @@ namespace SampleAppXamarin.Model
         public string DOB { get; set; }
         public string Maritalstatus { get; set; }
         public string Sex { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
