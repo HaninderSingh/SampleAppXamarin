@@ -10,13 +10,13 @@ using Xamarin.Forms.Xaml;
 
 namespace SampleAppXamarin.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class UserDetailViewPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class UserDetailViewPage : ContentPage
+    {
         UserDetailViewModel userDetailViewModel;
-        public UserDetailViewPage ()
-		{
-			InitializeComponent ();
+        public UserDetailViewPage()
+        {
+            InitializeComponent();
             userDetailViewModel = new UserDetailViewModel();
             BindingContext = userDetailViewModel;
         }
@@ -25,11 +25,8 @@ namespace SampleAppXamarin.View
             base.OnAppearing();
             try
             {
-               if(userDetailViewModel != null)
-                {
+                if (userDetailViewModel != null)
                     userDetailViewModel.OnUserlist();
-                    //Userlist.ItemsSource = userDetailViewModel.UserDetaillist;
-               }
             }
             catch (Exception ex)
             {

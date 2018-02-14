@@ -4,9 +4,6 @@
              xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
               xmlns:Template="clr-namespace:SampleAppXamarin.View"
              x:Class="SampleAppXamarin.View.UserDetailViewPage">
-    <!--<ContentPage.Content>
-         <Template:UserDetailTemplate></Template:UserDetailTemplate>
-    </ContentPage.Content>-->
     <ContentPage.Content>
         <ListView  HasUnevenRows="True" ItemsSource="{Binding UserDetaillist}">
                 <ListView.ItemTemplate>

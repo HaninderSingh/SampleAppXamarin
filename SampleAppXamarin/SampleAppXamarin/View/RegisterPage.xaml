@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"  
              x:Class="SampleAppXamarin.View.RegisterPage">
     <StackLayout Padding="10">
         <controls:CardView Padding="10">
@@ -14,7 +15,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource DefaultLabel}" Text="FirstName"  TextColor="{DynamicResource LableTextColor}"/>
                         <Entry Grid.Column="1" x:Name="entryFirstName"
-                             Placeholder="FirstName" Text="{Binding FirstName , Mode=TwoWay}">
+                             Placeholder="FirstName" Text="{Binding firstName , Mode=TwoWay}">
                         </Entry>
                     </Grid>
 
@@ -25,7 +26,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="LastName"/>
                         <Entry Grid.Column="1" Margin="0,8,0,0"
-                           x:Name="entryLastName"  Placeholder="LastName" Text="{Binding LastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
+                           x:Name="entryLastName"  Placeholder="LastName" Text="{Binding lastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
                         </Entry>
                     </Grid>
 
@@ -36,11 +37,11 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Contact"/>
                         <Entry Margin="0,8,0,0" Grid.Column="1"
-                                           x:Name="ContactNoEntry" Text="{Binding ContactNo , Mode=TwoWay}"
+                                           x:Name="ContactNoEntry" Text="{Binding contact , Mode=TwoWay}"
                                            Placeholder="Email" Keyboard="Numeric">
                         </Entry>
                     </Grid>
-                    
+
                     <Grid HeightRequest="50">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
@@ -48,7 +49,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Email"/>
                         <Entry Margin="0,8,0,0" Grid.Column="1"
-                                           x:Name="emailEntry" Text="{Binding EmailAddress , Mode=TwoWay}"
+                                           x:Name="emailEntry" Text="{Binding emailAddress , Mode=TwoWay}"
                                            Placeholder="Email" Keyboard="Email">
                         </Entry>
                     </Grid>
@@ -58,14 +59,8 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Nationality"/>
-                    </Grid>
-
-                    <Grid HeightRequest="50">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="7*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" VerticalTextAlignment="Center" Text="D.O.B"/>
+                        <Picker Grid.Column="1" x:Name="NationalityPicker" SelectedItem="{Binding nationality}" Title="Select Nationality">
+                        </Picker>
                     </Grid>
                     
                     <Grid HeightRequest="50">
@@ -74,6 +69,12 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Maritial Status"/>
+                        <Picker  Grid.Column="1" x:Name="MaritialStatusPicker" SelectedItem="{Binding maritialstatus}" Title="Select">
+                            <Picker.Items>
+                                <x:String>Married</x:String>
+                                <x:String>Unmarried</x:String>
+                            </Picker.Items>
+                        </Picker>
                     </Grid>
 
                     <Grid HeightRequest="50">
@@ -82,36 +83,29 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Sex"/>
+                        <Picker  Grid.Column="1" x:Name="SexPicker" SelectedItem="{Binding sex}" Title="Select">
+                            <Picker.Items>
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </Picker.Items>
+                        </Picker>
                     </Grid>
                 </StackLayout>
 
             </ScrollView>
         </controls:CardView>
 
-        <!--<StackLayout
+        <StackLayout
           x:Name="loginStack"
           HorizontalOptions="Fill"
           VerticalOptions="EndAndExpand"
           Padding="20, 0"
           Grid.Row="5">
-            <ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{DynamicResource ActivityIndicatorColor}"></ActivityIndicator>
-            <artina:Button
-             AutomationId="Register"
-            Style="{DynamicResource PrimaryActionButtonStyle}" 
-            VerticalOptions="End"
-            Text="{L10n:Translate Register}" IsEnabled="{Binding IsEnabled}" Command="{Binding RegisterCommand}"
-            WidthRequest="{ artina:OnOrientationDouble
-						LandscapePhone=200,
-						LandscapeTablet=400 }"
-            HorizontalOptions="{ artina:OnOrientationLayoutOptions
-						PortraitPhone=Fill,
-						LandscapePhone=Center,
-						PortraitTablet=Fill,
-						LandscapeTablet=Center }"/>
-
-
-
-        </StackLayout>-->
+            <!--<ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{DynamicResource ActivityIndicatorColor}"></ActivityIndicator>-->
+            <Button  VerticalOptions="End"
+            Text="Register" Command="{Binding RegisterCommand}"></Button>
+          
+        </StackLayout>
 
     </StackLayout>
 </ContentPage>

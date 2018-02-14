@@ -13,7 +13,6 @@ namespace SampleAppXamarin.Model
         public string ContactNo { get; set; }
         public string Email { get; set; }
         public string Nationality { get; set; }
-        public string DOB { get; set; }
         public string Maritalstatus { get; set; }
         public string Sex { get; set; }
     }
