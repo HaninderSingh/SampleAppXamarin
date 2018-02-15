@@ -2,7 +2,6 @@
   {
     "FirstName": "Alam",
     "LastName": "Md",
-    "profilePicture": "",
     "ContactNo": "9800123456",
     "Email": "alam@demo.com",
     "Nationality": "Indian",
@@ -13,12 +12,11 @@
   {
     "FirstName": "Karan",
     "LastName": "Sharma",
-    "profilePicture": "",
     "ContactNo": "9800112233",
     "Email": "Karan@demo.com",
     "Nationality": "Indian",
     "DOB": "28/1/92",
     "Maritalstatus": "Unmarried",
-    "Sex": "Single"
+    "Sex": "Male"
   }
 ]

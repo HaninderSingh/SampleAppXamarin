@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleAppXamarin.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,6 +11,16 @@ namespace SampleAppXamarin.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        private bool isBusy;
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged("IsBusy");
+            }
+        }
         protected BaseViewModel()
         {
 

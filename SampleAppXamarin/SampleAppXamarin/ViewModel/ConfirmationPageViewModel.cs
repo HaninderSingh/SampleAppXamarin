@@ -28,12 +28,17 @@ namespace SampleAppXamarin.ViewModel
         {
             try
             {
+                IsBusy = true;
                 LocalDB.PutDetail(UserDetail);
                 Navigate?.Invoke(this, null);
             }
             catch (Exception ex)
             {
                 ex.ToString();
+            }
+            finally
+            {
+                IsBusy = true;
             }
         }
     }

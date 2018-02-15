@@ -91,7 +91,14 @@
     <Compile Include="DBService\SQLiteiOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MessageBar\MessageBarManager.cs" />
+    <Compile Include="MessageBar\MessageBarStyleSheet.cs" />
+    <Compile Include="MessageBar\MessageBarViewController.cs" />
+    <Compile Include="MessageBar\MessageType.cs" />
+    <Compile Include="MessageBar\MessageView.cs" />
+    <Compile Include="MessageBar\MessageWindow.cs" />
     <Compile Include="Renderer\BaseEntryRenderer.cs" />
+    <Compile Include="Services\ToastNotifier.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

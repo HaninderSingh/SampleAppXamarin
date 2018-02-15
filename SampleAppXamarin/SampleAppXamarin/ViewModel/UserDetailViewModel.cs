@@ -30,6 +30,7 @@ namespace SampleAppXamarin.ViewModel
         {
             try
             {
+                IsBusy = true;
                 UserDetaillist = LocalDB.GetDetail();
                 if (UserDetaillist.Count == 0)
                     OnUserlist();
@@ -39,7 +40,10 @@ namespace SampleAppXamarin.ViewModel
             {
                 ex.ToString();
             }
-
+            finally
+            {
+                IsBusy = false;
+            }
         }
         public void OnUserlist()
         {
