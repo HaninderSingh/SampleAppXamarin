@@ -18,9 +18,20 @@ namespace SampleAppXamarin.View
 		{
             try
             {
-                InitializeComponent();
-                registerPageViewModel = new RegisterPageViewModel();
-                BindingContext = registerPageViewModel;
+                try
+                {
+                    InitializeComponent();
+                    registerPageViewModel = new RegisterPageViewModel();
+                    BindingContext = registerPageViewModel;
+                    this.entryFirstName.Completed += (object sender, EventArgs e) => this.entryLastName.Focus();
+                    this.entryLastName.Completed += (object sender, EventArgs e) => this.ContactNoEntry.Focus();
+                    this.ContactNoEntry.Completed += (object sender, EventArgs e) => this.emailEntry.Focus();
+                }
+                catch (Exception ex)
+                {
+                    ex.ToString();
+                }
+              
             }
             catch (Exception ex)
             {

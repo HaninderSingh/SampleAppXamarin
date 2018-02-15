@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="DBService\SQLiteAndroid.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderer\BaseEntryRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
