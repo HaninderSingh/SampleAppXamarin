@@ -50,6 +50,12 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.3</Version>
     </PackageReference>
+    <PackageReference Include="SQLite.Net-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="SQLite.Net.Core-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
@@ -58,6 +64,7 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBService\SQLiteAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

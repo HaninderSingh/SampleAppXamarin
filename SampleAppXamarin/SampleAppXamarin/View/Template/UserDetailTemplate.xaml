@@ -58,15 +58,6 @@
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="D.O.B" VerticalTextAlignment="Center"/>
-                        <Label Grid.Column="1" Text="{Binding DOB}" VerticalTextAlignment="Center"/>
-                    </Grid>
-
-                    <Grid HeightRequest="20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="7*"/>
-                        </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Text="Marital status" VerticalTextAlignment="Center"/>
                         <Label Grid.Column="1" Text="{Binding Maritalstatus}" VerticalTextAlignment="Center"/>
                     </Grid>

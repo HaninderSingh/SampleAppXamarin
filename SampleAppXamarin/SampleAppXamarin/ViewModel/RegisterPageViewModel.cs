@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SampleAppXamarin.DBService;
 using SampleAppXamarin.Model;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace SampleAppXamarin.ViewModel
 {
     public class RegisterPageViewModel : BaseViewModel
     {
+        public LocalDataBase LocalDB;
         private List<NationalityModel> nationalitylist;
         public List<NationalityModel> Nationalitylist
         {
@@ -41,6 +43,7 @@ namespace SampleAppXamarin.ViewModel
 
         public RegisterPageViewModel()
         {
+            LocalDB = new LocalDataBase();
             Nationalitylist = new List<NationalityModel>();
             NationalityName = new List<string>();
             UserDetaillist = new List<UserDetailModel>();
@@ -61,7 +64,8 @@ namespace SampleAppXamarin.ViewModel
                     Maritalstatus = maritialstatus,
                     Sex = sex
                 };
-                UserDetaillist.Add(userDetailModel);
+                LocalDB.PutDetail(userDetailModel);
+                
             }
             catch (Exception ex)
             {

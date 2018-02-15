@@ -20,13 +20,12 @@ namespace SampleAppXamarin.View
             userDetailViewModel = new UserDetailViewModel();
             BindingContext = userDetailViewModel;
         }
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
             try
             {
-                if (userDetailViewModel != null)
-                    userDetailViewModel.OnUserlist();
+                await userDetailViewModel.GetDetailFromSql();
             }
             catch (Exception ex)
             {
