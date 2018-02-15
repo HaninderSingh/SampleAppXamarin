@@ -15,7 +15,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource DefaultLabel}" Text="FirstName"  TextColor="{DynamicResource LableTextColor}"/>
                         <controls:BaseEntry  ReturnType="Next" Grid.Column="1" x:Name="entryFirstName"
-                             Placeholder="FirstName" Text="{Binding firstName , Mode=TwoWay}">
+                             Placeholder="Enter FirstName" Text="{Binding firstName , Mode=TwoWay}">
                         </controls:BaseEntry>
                     </Grid>
 
@@ -26,7 +26,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="LastName"/>
                         <controls:BaseEntry  ReturnType="Next" Grid.Column="1" Margin="0,8,0,0"
-                           x:Name="entryLastName"  Placeholder="LastName" Text="{Binding lastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
+                           x:Name="entryLastName"  Placeholder="Enter LastName" Text="{Binding lastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
                         </controls:BaseEntry>
                     </Grid>
 
@@ -38,7 +38,7 @@
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Contact"/>
                         <controls:BaseEntry  ReturnType="Next" Margin="0,8,0,0" Grid.Column="1"
                                            x:Name="ContactNoEntry" Text="{Binding contact , Mode=TwoWay}"
-                                           Placeholder="Email" Keyboard="Numeric">
+                                           Placeholder="Enter Contact Number" Keyboard="Numeric">
                         </controls:BaseEntry>
                     </Grid>
 
@@ -50,7 +50,7 @@
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Email"/>
                         <controls:BaseEntry  ReturnType="Done" Margin="0,8,0,0" Grid.Column="1"
                                            x:Name="emailEntry" Text="{Binding emailAddress , Mode=TwoWay}"
-                                           Placeholder="Email" Keyboard="Email">
+                                           Placeholder="Enter Email" Keyboard="Email">
                         </controls:BaseEntry>
                     </Grid>
                     <Grid HeightRequest="50">
@@ -99,9 +99,9 @@
           x:Name="loginStack"
           HorizontalOptions="Fill"
           VerticalOptions="EndAndExpand"
-          Padding="20, 0"
+          Padding="10, 0"
           Grid.Row="5">
-            <!--<ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="{DynamicResource ActivityIndicatorColor}"></ActivityIndicator>-->
+            <ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="#2c3e50"></ActivityIndicator>
             <Button  VerticalOptions="End"
             Text="Register" Command="{Binding RegisterCommand}"></Button>
           

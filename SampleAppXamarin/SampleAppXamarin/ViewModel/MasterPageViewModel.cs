@@ -18,6 +18,7 @@ namespace SampleAppXamarin.ViewModel
         {
             try
             {
+                IsBusy = true;
                 MasterDetailPage MasterDetailPage = (Application.Current.MainPage as MasterDetailPage);
                 NavigationPage navPage = MasterDetailPage.Detail as NavigationPage;
                 MasterDetailPage.IsPresented = false;
@@ -34,6 +35,10 @@ namespace SampleAppXamarin.ViewModel
             catch (Exception ex)
             {
                 ex.ToString();
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

@@ -7,11 +7,11 @@
         <StackLayout Spacing="10" >
             <Template:UserDetailTemplate/>
             <StackLayout
-          x:Name="loginStack"
-          HorizontalOptions="Fill"
+         HorizontalOptions="Fill"
           VerticalOptions="EndAndExpand"
           Padding="20, 0">
-                 <Button  VerticalOptions="End"
+                <ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="#2c3e50"></ActivityIndicator>
+            <Button  VerticalOptions="End"
             Text="Save"  Clicked="SaveClicked"></Button>
                 <Button  VerticalOptions="End"
             Text="Cancel" Clicked="CancelClicked"></Button>

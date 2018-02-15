@@ -4,6 +4,7 @@ using SampleAppXamarin.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,6 @@ namespace SampleAppXamarin.ViewModel
 {
     public class UserDetailViewModel : BaseViewModel
     {
-        public event EventHandler Navigate;
         public LocalDataBase LocalDB;
         private List<UserDetailModel> userDetaillist;
         public List<UserDetailModel> UserDetaillist
@@ -30,16 +30,19 @@ namespace SampleAppXamarin.ViewModel
         {
             try
             {
-                UserDetaillist = LocalDB.GetDetail();
+                IsBusy = true;
+                UserDetaillist = LocalDB.GetDetail().OrderBy(w => w.FirstName).ToList();
                 if (UserDetaillist.Count == 0)
                     OnUserlist();
-                Navigate?.Invoke(this, null);
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
-
+            finally
+            {
+                IsBusy = false;
+            }
         }
         public void OnUserlist()
         {

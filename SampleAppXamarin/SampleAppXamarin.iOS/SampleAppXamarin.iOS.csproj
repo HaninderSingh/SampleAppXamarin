@@ -91,7 +91,14 @@
     <Compile Include="DBService\SQLiteiOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MessageBar\MessageBarManager.cs" />
+    <Compile Include="MessageBar\MessageBarStyleSheet.cs" />
+    <Compile Include="MessageBar\MessageBarViewController.cs" />
+    <Compile Include="MessageBar\MessageType.cs" />
+    <Compile Include="MessageBar\MessageView.cs" />
+    <Compile Include="MessageBar\MessageWindow.cs" />
     <Compile Include="Renderer\BaseEntryRenderer.cs" />
+    <Compile Include="Services\ToastNotifier.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +137,12 @@
     <PackageReference Include="SQLite.Net.Core-PCL">
       <Version>3.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Iconize">
+      <Version>1.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome">
+      <Version>1.0.10</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -138,5 +151,14 @@
       <Project>{CF628582-7957-4271-98D0-AC4ABD804C6D}</Project>
       <Name>SampleAppXamarin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_people%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_people%403x.png" />
   </ItemGroup>
 </Project>
