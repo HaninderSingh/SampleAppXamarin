@@ -10,26 +10,22 @@ using Xamarin.Forms.Xaml;
 
 namespace SampleAppXamarin.View
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class UserDetailViewPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class UserDetailViewPage : ContentPage
+    {
         UserDetailViewModel userDetailViewModel;
-        public UserDetailViewPage ()
-		{
-			InitializeComponent ();
+        public UserDetailViewPage()
+        {
+            InitializeComponent();
             userDetailViewModel = new UserDetailViewModel();
             BindingContext = userDetailViewModel;
         }
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
             try
             {
-               if(userDetailViewModel != null)
-                {
-                    userDetailViewModel.OnUserlist();
-                    Userlist.ItemsSource = userDetailViewModel.UserDetaillist;
-               }
+                await userDetailViewModel.GetDetailFromSql();
             }
             catch (Exception ex)
             {

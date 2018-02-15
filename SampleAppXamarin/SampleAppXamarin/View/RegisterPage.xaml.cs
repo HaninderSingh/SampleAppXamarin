@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleAppXamarin.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,36 @@ namespace SampleAppXamarin.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RegisterPage : ContentPage
 	{
-		public RegisterPage ()
+        RegisterPageViewModel registerPageViewModel;
+        public RegisterPage ()
 		{
-			InitializeComponent ();
+            try
+            {
+                InitializeComponent();
+                registerPageViewModel = new RegisterPageViewModel();
+                BindingContext = registerPageViewModel;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+			
 		}
-	}
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            try
+            {
+                if (registerPageViewModel != null)
+                {
+                    registerPageViewModel.OnNationality();
+                    NationalityPicker.ItemsSource = registerPageViewModel.NationalityName;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+    }
 }
