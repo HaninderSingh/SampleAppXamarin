@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CustomControl\BaseEntry.cs~RF5b3d8b.TMP" />
     <None Remove="Resource\Country.json" />
     <None Remove="Resource\Detail.json" />
   </ItemGroup>

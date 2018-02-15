@@ -14,9 +14,9 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Style="{DynamicResource DefaultLabel}" Text="FirstName"  TextColor="{DynamicResource LableTextColor}"/>
-                        <Entry Grid.Column="1" x:Name="entryFirstName"
+                        <controls:BaseEntry  ReturnType="Next" Grid.Column="1" x:Name="entryFirstName"
                              Placeholder="FirstName" Text="{Binding firstName , Mode=TwoWay}">
-                        </Entry>
+                        </controls:BaseEntry>
                     </Grid>
 
                     <Grid HeightRequest="50">
@@ -25,9 +25,9 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="LastName"/>
-                        <Entry Grid.Column="1" Margin="0,8,0,0"
+                        <controls:BaseEntry  ReturnType="Next" Grid.Column="1" Margin="0,8,0,0"
                            x:Name="entryLastName"  Placeholder="LastName" Text="{Binding lastName , Mode=TwoWay}" VerticalOptions="StartAndExpand">
-                        </Entry>
+                        </controls:BaseEntry>
                     </Grid>
 
                     <Grid HeightRequest="50">
@@ -36,10 +36,10 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Contact"/>
-                        <Entry Margin="0,8,0,0" Grid.Column="1"
+                        <controls:BaseEntry  ReturnType="Next" Margin="0,8,0,0" Grid.Column="1"
                                            x:Name="ContactNoEntry" Text="{Binding contact , Mode=TwoWay}"
                                            Placeholder="Email" Keyboard="Numeric">
-                        </Entry>
+                        </controls:BaseEntry>
                     </Grid>
 
                     <Grid HeightRequest="50">
@@ -48,10 +48,10 @@
                             <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalTextAlignment="Center" Text="Email"/>
-                        <Entry Margin="0,8,0,0" Grid.Column="1"
+                        <controls:BaseEntry  ReturnType="Done" Margin="0,8,0,0" Grid.Column="1"
                                            x:Name="emailEntry" Text="{Binding emailAddress , Mode=TwoWay}"
                                            Placeholder="Email" Keyboard="Email">
-                        </Entry>
+                        </controls:BaseEntry>
                     </Grid>
                     <Grid HeightRequest="50">
                         <Grid.ColumnDefinitions>
