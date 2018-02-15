@@ -20,7 +20,7 @@ namespace SampleAppXamarin.View
             try
             {
                 InitializeComponent();
-                userDetailViewModel = new UserDetailViewModel();
+              //  userDetailViewModel = new UserDetailViewModel();
                 //    BindingContext = userDetailViewModel;
             }
             catch (Exception ex)

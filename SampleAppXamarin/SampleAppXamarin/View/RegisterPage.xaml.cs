@@ -26,6 +26,7 @@ namespace SampleAppXamarin.View
                     this.entryFirstName.Completed += (object sender, EventArgs e) => this.entryLastName.Focus();
                     this.entryLastName.Completed += (object sender, EventArgs e) => this.ContactNoEntry.Focus();
                     this.ContactNoEntry.Completed += (object sender, EventArgs e) => this.emailEntry.Focus();
+                    registerPageViewModel.Navigate += NavigateToConfimationPage;
                 }
                 catch (Exception ex)
                 {
@@ -44,16 +45,17 @@ namespace SampleAppXamarin.View
             base.OnAppearing();
             try
             {
-                if (registerPageViewModel != null)
-                {
-                    registerPageViewModel.OnNationality();
-                    NationalityPicker.ItemsSource = registerPageViewModel.NationalityName;
-                }
+                registerPageViewModel.OnNationality();
+                NationalityPicker.ItemsSource = registerPageViewModel.NationalityName;
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
+        }
+        private void NavigateToConfimationPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ConfirmationPage(sender as RegisterPageViewModel));
         }
     }
 }

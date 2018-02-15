@@ -12,6 +12,7 @@ namespace SampleAppXamarin.ViewModel
 {
     public class UserDetailViewModel : BaseViewModel
     {
+        public event EventHandler Navigate;
         public LocalDataBase LocalDB;
         private List<UserDetailModel> userDetaillist;
         public List<UserDetailModel> UserDetaillist
@@ -32,6 +33,7 @@ namespace SampleAppXamarin.ViewModel
                 UserDetaillist = LocalDB.GetDetail();
                 if (UserDetaillist.Count == 0)
                     OnUserlist();
+                Navigate?.Invoke(this, null);
             }
             catch (Exception ex)
             {

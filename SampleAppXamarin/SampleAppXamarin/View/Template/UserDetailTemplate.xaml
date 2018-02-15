@@ -6,7 +6,7 @@
     <ContentView.Content>
         <controls:CardView Margin="10" Padding="10">
             <Grid>
-                <StackLayout>
+                <StackLayout x:Name="stack">
 
                     <Grid HeightRequest="20">
                         <Grid.ColumnDefinitions>
