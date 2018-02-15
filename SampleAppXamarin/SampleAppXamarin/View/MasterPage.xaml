@@ -9,13 +9,13 @@
                 <RowDefinition Height="200" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <!--<Grid>
+            <Grid>
                 <Image Source="bg.png" Aspect="AspectFill" />
                 <StackLayout Padding="0,20,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <controls:CircleImage BorderColor="White" BorderThickness="2" Source="profile.png" Aspect="AspectFill" WidthRequest="85" HeightRequest="85" />
+                    <!--<controls:CircleImage BorderColor="White" BorderThickness="2" Source="profile.png" Aspect="AspectFill" WidthRequest="85" HeightRequest="85" />-->
                     <Label Text="Adam Pedley" TextColor="White" FontSize="Large" />
                 </StackLayout>
-            </Grid>-->
+            </Grid>
             <StackLayout Margin="20,20,20,0" Grid.Row="1" Spacing="15">
             <controls:NavigationControl Text="Register Page" Command="{Binding NavigationCommand}" CommandParameter="1" />
                 <ContentView HeightRequest="1" BackgroundColor="Gray" />

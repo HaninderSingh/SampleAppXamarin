@@ -12,7 +12,7 @@ namespace SampleAppXamarin.ViewModel
 {
     public class RegisterPageViewModel : BaseViewModel
     {
-        public LocalDataBase LocalDB;
+        public event EventHandler Navigate;
         private List<NationalityModel> nationalitylist;
         public List<NationalityModel> Nationalitylist
         {
@@ -43,7 +43,6 @@ namespace SampleAppXamarin.ViewModel
 
         public RegisterPageViewModel()
         {
-            LocalDB = new LocalDataBase();
             Nationalitylist = new List<NationalityModel>();
             NationalityName = new List<string>();
             UserDetaillist = new List<UserDetailModel>();
@@ -64,8 +63,8 @@ namespace SampleAppXamarin.ViewModel
                     Maritalstatus = maritialstatus,
                     Sex = sex
                 };
-                LocalDB.PutDetail(userDetailModel);
-                
+                userDetaillist.Add(userDetailModel);
+                Navigate?.Invoke(this, null);
             }
             catch (Exception ex)
             {
