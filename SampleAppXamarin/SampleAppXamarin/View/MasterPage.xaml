@@ -16,9 +16,9 @@
                 </StackLayout>
             </Grid>
             <StackLayout Margin="20,20,20,0" Grid.Row="1" Spacing="15">
-                <controls:NavigationControl Icon="fa-archive" Text="Register Page" Command="{Binding NavigationCommand}" CommandParameter="1" />
+                <controls:NavigationControl Icon="md-person" Text="Register Page" Command="{Binding NavigationCommand}" CommandParameter="1" />
                 <ContentView HeightRequest="1" BackgroundColor="Gray" />
-                <controls:NavigationControl Icon="fa-cog" Text="User Detail"  Command="{Binding NavigationCommand}" CommandParameter="2" />
+                <controls:NavigationControl Icon="md-people" Text="User Detail"  Command="{Binding NavigationCommand}" CommandParameter="2" />
             </StackLayout>
           </Grid>
      </ContentPage.Content>

@@ -152,13 +152,4 @@
       <Name>SampleAppXamarin</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_people.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_people%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\ic_people%403x.png" />
-  </ItemGroup>
 </Project>

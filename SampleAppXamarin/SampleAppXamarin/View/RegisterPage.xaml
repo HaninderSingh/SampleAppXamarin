@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"  
-             x:Class="SampleAppXamarin.View.RegisterPage">
+             x:Class="SampleAppXamarin.View.RegisterPage" Title="Register Detail">
     <StackLayout Padding="10">
         <controls:CardView Padding="10">
             <ScrollView VerticalOptions="FillAndExpand">

@@ -1,4 +1,6 @@
 ﻿using SampleAppXamarin.DBService;
+using SampleAppXamarin.Helpers;
+using SampleAppXamarin.Interfaces;
 using SampleAppXamarin.Model;
 using System;
 using System.Collections.Generic;
@@ -30,6 +32,8 @@ namespace SampleAppXamarin.ViewModel
             {
                 IsBusy = true;
                 LocalDB.PutDetail(UserDetail);
+                string msg = "Detail Saved";
+                msg.ToToast(ToastNotificationType.Success);
                 Navigate?.Invoke(this, null);
             }
             catch (Exception ex)

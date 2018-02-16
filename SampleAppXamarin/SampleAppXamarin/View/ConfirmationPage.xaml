@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Template="clr-namespace:SampleAppXamarin.View"
-             x:Class="SampleAppXamarin.View.ConfirmationPage">
+             x:Class="SampleAppXamarin.View.ConfirmationPage" Title="Confirm Detail">
     <ContentPage.Content>
         <StackLayout Spacing="10" >
             <Template:UserDetailTemplate/>
