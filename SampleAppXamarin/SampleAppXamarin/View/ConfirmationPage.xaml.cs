@@ -64,7 +64,7 @@ namespace SampleAppXamarin.View
                 {
                     Master = new MasterPage() { Title = "User Detail" },
                     Detail = new NavigationPage(new UserDetailViewPage())
-                
+
                 });
             }
             catch (Exception ex)

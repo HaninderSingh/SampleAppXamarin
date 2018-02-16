@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:SampleAppXamarin.CustomControl"
               xmlns:Template="clr-namespace:SampleAppXamarin.View"
-             x:Class="SampleAppXamarin.View.UserDetailViewPage">
+             x:Class="SampleAppXamarin.View.UserDetailViewPage" Title="User Detail">
     <ContentPage.Content>
         <StackLayout>
             <ActivityIndicator  IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="#2c3e50"></ActivityIndicator>
